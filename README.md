@@ -25,12 +25,12 @@ pip install -r requirements-dev.txt  # Optional for development
 
 ### 4. Run the Development Server
 ```sh
-uvicorn app:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### 5. Run in Production
 ```sh
-gunicorn -k uvicorn.workers.UvicornWorker app:app --workers 4
+gunicorn -k uvicorn.workers.UvicornWorker app.main:app --workers 4
 ```
 
 ## Notes
