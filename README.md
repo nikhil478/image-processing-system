@@ -37,3 +37,7 @@ gunicorn -k uvicorn.workers.UvicornWorker app.main:app --workers 4
 - Activate the virtual environment before running the project.
 - Use `--reload` only in development.
 - Gunicorn is recommended for production.
+
+
+docker run --name redis-server -d -p 6379:6379 redis:latest
+celery -A app.core.celery.celery worker --loglevel=info
