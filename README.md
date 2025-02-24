@@ -41,3 +41,24 @@ gunicorn -k uvicorn.workers.UvicornWorker app.main:app --workers 4
 
 docker run --name redis-server -d -p 6379:6379 redis:latest
 celery -A app.workers.celery.celery worker --loglevel=info
+
+
+Autogenerate Migration Files
+After defining or modifying SQLAlchemy models, create a migration script:
+
+alembic revision --autogenerate -m "Describe the migration change"
+Example:
+
+alembic revision --autogenerate -m "Added new column to ProcessingRequest"
+
+Apply the Migrations to Database
+Run the migrations to update your PostgreSQL database:
+alembic upgrade head
+
+Check the Current Migration Version
+Verify which migration is currently applied:
+alembic current
+
+Revert to a Previous Migration (If Needed)
+Rollback to the previous version:
+alembic downgrade -1
