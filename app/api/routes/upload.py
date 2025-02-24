@@ -30,7 +30,6 @@ async def upload_csv(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    time.sleep(2)
     process_csv.apply_async(args=[request_id, file_path])  # Pass file path
 
     return {"message": "File uploaded successfully", "request_id": request_id}
