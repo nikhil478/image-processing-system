@@ -40,4 +40,4 @@ gunicorn -k uvicorn.workers.UvicornWorker app.main:app --workers 4
 
 
 docker run --name redis-server -d -p 6379:6379 redis:latest
-celery -A app.core.celery.celery worker --loglevel=info
+celery -A app.workers.celery.celery worker --loglevel=info
