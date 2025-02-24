@@ -13,4 +13,4 @@ celery.conf.update(
     result_serializer="json"
 )
 
-celery.autodiscover_tasks(["app.workers"])
+celery.autodiscover_tasks(["app.workers.tasks"])

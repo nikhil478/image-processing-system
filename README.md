@@ -2,6 +2,35 @@
 
 A simple image processing system.
 
+
+Prerequisites
+
+Ensure you have the following installed:
+
+Docker
+
+Docker Compose
+
+Getting Started
+
+1. Build and Start the Containers
+
+Run the following command to build and start the services:
+
+```sh
+docker-compose up --build
+```
+
+This will start the API, worker, database, and other necessary services.
+
+2. Stop and Remove Containers
+
+To stop and remove the running containers, use:
+
+```sh
+docker-compose down
+```
+
 ## Setup
 
 ### 1. Check Python Version
