@@ -1,6 +1,6 @@
 # Image Processing System
 
-A simple image processing system.
+A simple image processing system. Hosted Server will be up till 3 MARCH 2025 (http://54.204.88.148/docs)
 
 
 Prerequisites
